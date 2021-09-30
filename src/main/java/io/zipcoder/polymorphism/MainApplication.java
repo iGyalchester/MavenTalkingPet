@@ -41,19 +41,21 @@ public class MainApplication {
             if (petKind.equalsIgnoreCase("dog")){
                 Dog dog = new Dog(petKind, petName, petSpeak);
                 pets.add(dog);
+                dog.speech();
 
             } else if (petKind.equalsIgnoreCase("cat")){
                 Cat cat = new Cat(petKind, petName, petSpeak);
                 pets.add(cat);
+                cat.speech();
 
             } else {
                 CreatePet newPet =new CreatePet(petKind, petName, petSpeak);
                 pets.add(newPet);
+                newPet.speech();
             }
         }
         System.out.println(pets);
 
-        Pet.speech(pets);
     }
 
 }

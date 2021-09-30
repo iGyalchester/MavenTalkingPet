@@ -1,7 +1,5 @@
 package io.zipcoder.polymorphism;
 
-import java.util.ArrayList;
-
 public abstract class Pet {
     public String kind, speak;
     private String name;
@@ -21,12 +19,10 @@ public abstract class Pet {
         this.name = name;
     }
 
-    public static void speech(ArrayList<Pet> pets) {
-        for (Pet pet : pets) {
-            System.out.println(pet.speak);
-        }
-    }
+    public void speech() {
+        System.out.println(this.speak);
 
+    }
     @Override
     public String toString() {
         return "Pet{" +
@@ -35,4 +31,5 @@ public abstract class Pet {
                 ", Name='" + name + '\'' +
                 '}';
     }
+
 }
