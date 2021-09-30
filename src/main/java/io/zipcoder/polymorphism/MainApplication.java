@@ -8,16 +8,23 @@ public class MainApplication {
         ArrayList<Pet> pets = new ArrayList<>();
 
         Scanner petNumScanner = new Scanner(System.in);
-        System.out.println("How many pets do you have?");
-        int petNum = petNumScanner.nextInt();
-
-
+        int petNum;
+        do {
+            System.out.println("How many pets do you have?");
+            while (!petNumScanner.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.println("Please enter the number of pet you have!");
+                petNumScanner.next(); // this is important!
+            }
+            petNum = petNumScanner.nextInt();
+        } while (petNum <= 0);
 
         for (int i = 0; i < petNum; i++){
             //pet kind input
             Scanner PetKindScanner = new Scanner(System.in);
-            System.out.println("What kind of pet do you have? (One at a time, please)");
+            System.out.println("What kind of pet(s) do you have? (One at a time, please)");
             String petKind = PetKindScanner.nextLine();
+
 
 
             //petName input
