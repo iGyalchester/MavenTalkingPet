@@ -1,35 +1,37 @@
 package io.zipcoder.polymorphism;
 
 public abstract class Pet {
-    public String kind, speak;
-    private String name;
+	public String kind, speak;
+	private String name;
 
-    public Pet(String kind, String name, String speak){
-        this.name = name;
-        this.kind = kind;
-        this.speak = speak;
-    }
+	public Pet(String kind, String name, String speak){
 
-    public String getName() {
+		this.name = name;
+		this.kind = kind;
+		this.speak = speak;
+	}
 
-        return this.name;
-    }
+	public String getName() {
 
-    public void setName(String name) {
-        this.name = name;
-    }
+		return this.name;
+	}
 
-    public void speech() {
-        System.out.println(this.speak);
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    }
-    @Override
-    public String toString() {
-        return "Pet{" +
-                "Kind='" + kind + '\'' +
-                ", Speak='" + speak + '\'' +
-                ", Name='" + name + '\'' +
-                '}';
-    }
+	public void speech() {
+
+		System.out.println(this.speak);
+
+	}
+	@Override
+	public String toString() {
+		return "Pet{" +
+				"Kind='" + kind + '\'' +
+				", Speak='" + speak + '\'' +
+				", Name='" + name + '\'' +
+				'}';
+	}
 
 }
