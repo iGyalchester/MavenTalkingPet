@@ -5,4 +5,9 @@ public class Dog extends Pet{
         super(Kind, name, speak);
     }
 
+    @Override
+    public void speech() {
+        System.out.println(this.speak);
+
+    }
 }
