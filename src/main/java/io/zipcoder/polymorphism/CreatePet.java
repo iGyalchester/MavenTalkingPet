@@ -1,9 +1,9 @@
 package io.zipcoder.polymorphism;
 
 public class CreatePet extends Pet{
-	public CreatePet(String Kind, String name, String speak) {
+	public CreatePet(String kind, String name, String speak) {
 
-		super(Kind, name, speak);
+		super(kind, name, speak);
 	}
 	@Override
 	public void speech() {

@@ -1,6 +1,8 @@
 package io.zipcoder.polymorphism;
 
-public abstract class Pet {
+import java.util.Comparator;
+
+public abstract class Pet implements Comparable<Pet>{
 	public String kind, speak;
 	private String name;
 
@@ -20,11 +22,20 @@ public abstract class Pet {
 		this.name = name;
 	}
 
-	public void speech() {
+	public String getKind() {
+		return kind;
+	}
 
+	public int compareTo(Pet s){
+		return this.getName().compareTo(s.getName());
+	}
+
+	public void speech() {
 		System.out.println(this.speak);
 
 	}
+
+
 	@Override
 	public String toString() {
 		return "Pet{" +
@@ -34,4 +45,6 @@ public abstract class Pet {
 				'}';
 	}
 
+
 }
+

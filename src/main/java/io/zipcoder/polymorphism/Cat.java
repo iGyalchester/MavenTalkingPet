@@ -1,5 +1,7 @@
 package io.zipcoder.polymorphism;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Cat extends Pet{
 	public Cat(String kind, String name, String speak) {
 		super(kind, name, speak);
@@ -10,4 +12,5 @@ public class Cat extends Pet{
 
 		System.out.println("Meow Meow");
 	}
+
 }

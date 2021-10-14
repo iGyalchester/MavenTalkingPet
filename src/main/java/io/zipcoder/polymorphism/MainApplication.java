@@ -1,6 +1,8 @@
 package io.zipcoder.polymorphism;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class MainApplication {
@@ -53,20 +55,25 @@ public class MainApplication {
 			if (petKind.toLowerCase().contains("dog")){
 				Dog dog = new Dog("Dog", petName, petSpeak);
 				pets.add(dog);
-				dog.speech();
+
 
 			} else if(petKind.toLowerCase().contains("cat")){
 				Cat cat = new Cat("Cat", petName, petSpeak);
 				pets.add(cat);
-				cat.speech(); //call the speech method using a period on the reference variable (cat) pointing to that object.
+				 //call the speech method using a period on the reference variable (cat) pointing to that object.
 
 			} else {
 				CreatePet newPet =new CreatePet(petKind, petName, petSpeak);
 				pets.add(newPet);
-				newPet.speech();//reference variable newPet/ calling speech from the object that newPet is calling to.
+				//reference variable newPet/ calling speech from the object that newPet is calling to.
 			}
+			Collections.sort(pets);
 		}
+
 		System.out.println(pets);
+
+		Comparator<Pet> compare = new CompareByPetType();
+		pets.sort(compare);
 	}
 
 }
